@@ -26,7 +26,6 @@ public class Electrodomestico {
 		this.peso = peso;
 		this.color = COLOR;
 		this.consumoEnerg = CONSUMO;
-		precioFinal();
 	}
 
 	public Electrodomestico(double precioBase, String color, char consumoEnerg, double peso) {
@@ -38,7 +37,6 @@ public class Electrodomestico {
 		this.color = color;
 		this.consumoEnerg = consumoEnerg;
 		this.peso = peso;
-		precioFinal();
 	}
 
 	public double getPrecioBase() {
