@@ -1,11 +1,11 @@
 package Task2;
 
 public class Serie {
-	private String titulo;
-	private int numTemporadas;
-	private boolean entregado;
-	private String genero;
-	private String creador;
+	protected String titulo;
+	protected int numTemporadas;
+	protected boolean entregado;
+	protected String genero;
+	protected String creador;
 
 	public Serie(String titulo, int numTemporadas, String genero, String creador) {
 		this.titulo = titulo;
@@ -47,13 +47,7 @@ public class Serie {
 		this.numTemporadas = numTemporadas;
 	}
 
-	public boolean isEntregado() {
-		return entregado;
-	}
 
-	public void setEntregado(boolean entregado) {
-		this.entregado = entregado;
-	}
 
 	public String getGenero() {
 		return genero;
