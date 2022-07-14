@@ -5,6 +5,8 @@ public class Task1App {
 	public static void main(String[] args) {
 		Electrodomestico[] electrodomesticos = new Electrodomestico[10];
 		
+		int precioTotal = 0, precioTv = 0, precioLavadoras = 0;
+		
 		electrodomesticos[0] = new Electrodomestico(120, "bLanco", 'Z', 80);
 		electrodomesticos[1] = new Electrodomestico(20, "Negro", 'A', 5);
 		electrodomesticos[2] = new Television(250, "amarillo", 'B', 50, 40, true);
@@ -17,15 +19,26 @@ public class Task1App {
 		electrodomesticos[9] = new Electrodomestico(100, "ROSA", 'Z', 200);
 		
 		for (int i = 0; i < electrodomesticos.length; i++) {
-			System.out.println(electrodomesticos[i]);
+			electrodomesticos[i].precioFinal();
+			precioTotal += electrodomesticos[i].precioBase;
 		}
-		
-		System.out.println("-------------------------------------------------------------------------------");
 		
 		for (int i = 0; i < electrodomesticos.length; i++) {
-			electrodomesticos[i].precioFinal();
-			System.out.println(electrodomesticos[i]);
+			if (electrodomesticos[i] instanceof Television)
+			{
+				precioTv += electrodomesticos[i].precioBase;
+			}
 		}
+		
+		for (int i = 0; i < electrodomesticos.length; i++) {
+			if (electrodomesticos[i] instanceof Lavadora)
+			{
+				precioLavadoras += electrodomesticos[i].precioBase;
+			}
+		}
+		
+		System.out.println("Precio TVs: " + precioTv + "\nPrecio Lavadoras: " + precioLavadoras
+				+ "\nPrecio Electrodomésticos: " + precioTotal);
 		
 	}
 
