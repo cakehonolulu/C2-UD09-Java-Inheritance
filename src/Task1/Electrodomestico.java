@@ -2,7 +2,7 @@ package Task1;
 
 public class Electrodomestico {
 		public String colores[] = new String[] {"blanco", "negro", "rojo", "azul", "gris"};
-		public char consumos[] = new char[] {'A', 'F'};
+		public char consumos[] = new char[] {'A', 'B', 'C', 'D', 'E', 'F'};
 		
 		protected double precioBase;
 		protected String color;
