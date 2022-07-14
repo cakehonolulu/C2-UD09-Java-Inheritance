@@ -29,7 +29,9 @@ public class Electrodomestico {
 	    }
 
 	    public Electrodomestico(double precioBase, String color, char consumoEnerg, double peso) {
+	    	consumoEnerg = Character.toUpperCase(consumoEnerg);
 	    	consumoEnerg = comprobarConsumoEnergetico(consumoEnerg);
+	    	color = color.toLowerCase();
 	    	color = comprobarColor(color);
 	        this.precioBase = precioBase;
 	        this.color = color;
