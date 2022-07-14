@@ -90,7 +90,7 @@ public class Electrodomestico {
 	    	boolean m_valid = false;
 
 	    	for (int i = 0; i < colores.length; i++) {
-	    		if (color == colores[i]) {
+	    		if (color.equals(colores[i])) {
 	    			m_valid = true;
 				}	
 			}
