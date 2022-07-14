@@ -22,6 +22,7 @@ public class Task2App {
 		series[3].entregar();
 		videojuegos[1].entregar();
 		videojuegos[4].entregar();
+		
 	}
 
 }
