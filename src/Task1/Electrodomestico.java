@@ -29,6 +29,7 @@ public class Electrodomestico {
 	    }
 
 	    public Electrodomestico(double precioBase, String color, char consumoEnerg, double peso) {
+	    	consumoEnerg = comprobarConsumoEnergetico(consumoEnerg);
 	        this.precioBase = precioBase;
 	        this.color = color;
 	        this.consumoEnerg = consumoEnerg;
@@ -67,10 +68,26 @@ public class Electrodomestico {
 	        this.peso = peso;
 	    }
 
+	    public char comprobarConsumoEnergetico(char letra) {
+	    	boolean m_valid = false;
+
+	    	for (int i = 0; i < consumos.length; i++) {
+	    		if (letra == consumos[i]) {
+	    			m_valid = true;
+				}	
+			}
+	    	
+	    	if (!m_valid) {
+	    		letra = CONSUMO;
+	    	}
+	    	
+	    	return letra;
+	    	
+	    }
+	    
 	    @Override
 	    public String toString() {
 	        return "Electrodomestico [precioBase=" + precioBase + ", color=" + color + ", consumoEnerg=" + consumoEnerg
-	                + ", peso=" + peso + ", COLOR=" + COLOR + ", CONSUMO=" + CONSUMO + ", PRECIO_BASE=" + PRECIO_BASE
-	                + ", PESO=" + PESO + "]";
+	                + ", peso=" + peso + "]";
 	    }
 }
