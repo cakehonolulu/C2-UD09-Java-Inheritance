@@ -9,20 +9,22 @@ public class Television extends Electrodomestico {
 		super();
 		this.resolucion = 20;
 		this.sintonizador = false;
+		precioFinal();
 	}
 
 	public Television(double precioBase, double peso) {
 		super(precioBase, peso);
 		this.resolucion = 20;
 		this.sintonizador = false;
+		precioFinal();
 	}
 
 	public Television(double precioBase, String color, char consumoEnerg, double peso, double resolucion,
-			boolean sintonizador) {
+		boolean sintonizador) {
 		super(precioBase, color, consumoEnerg, peso);
 		this.resolucion = resolucion;
 		this.sintonizador = sintonizador;
-
+		precioFinal();
 	}
 
 	public double getResolucion() {
@@ -41,6 +43,18 @@ public class Television extends Electrodomestico {
 		this.sintonizador = sintonizador;
 	}
 
+	public void precioFinal() {
+		super.precioFinal();
+		
+		if (this.resolucion >= 40) {
+			this.precioBase += (this.precioBase * 0.3);
+		}
+		
+		if (this.sintonizador == true) {
+			this.precioBase += 50;
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return "Television [resolucion=" + resolucion + ", sintonizador=" + sintonizador + "]";
