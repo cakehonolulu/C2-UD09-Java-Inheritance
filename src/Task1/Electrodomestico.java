@@ -30,6 +30,7 @@ public class Electrodomestico {
 
 	    public Electrodomestico(double precioBase, String color, char consumoEnerg, double peso) {
 	    	consumoEnerg = comprobarConsumoEnergetico(consumoEnerg);
+	    	color = comprobarColor(color);
 	        this.precioBase = precioBase;
 	        this.color = color;
 	        this.consumoEnerg = consumoEnerg;
@@ -82,6 +83,23 @@ public class Electrodomestico {
 	    	}
 	    	
 	    	return letra;
+	    	
+	    }
+
+	    public String comprobarColor(String color) {
+	    	boolean m_valid = false;
+
+	    	for (int i = 0; i < colores.length; i++) {
+	    		if (color == colores[i]) {
+	    			m_valid = true;
+				}	
+			}
+	    	
+	    	if (!m_valid) {
+	    		color = COLOR;
+	    	}
+	    	
+	    	return color;
 	    	
 	    }
 	    
