@@ -17,7 +17,7 @@ public class Television extends Electrodomestico {
 		this.sintonizador = false;
 	}
 
-	public Television(double precioBase, colores color, consumoEnergetico consumoEnerg, double peso, double resolucion,
+	public Television(double precioBase, String color, char consumoEnerg, double peso, double resolucion,
 			boolean sintonizador) {
 		super(precioBase, color, consumoEnerg, peso);
 		this.resolucion = resolucion;
