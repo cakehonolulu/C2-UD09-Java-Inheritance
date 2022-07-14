@@ -1,13 +1,16 @@
 package Task1;
 
 public class Electrodomestico {
+		public String colores[] = new String[] {"blanco", "negro", "rojo", "azul", "gris"};
+		public char consumos[] = new char[] {'A', 'F'};
+		
 		protected double precioBase;
-		protected colores color;
-		protected consumoEnergetico consumoEnerg;
+		protected String color;
+		protected char consumoEnerg;
 		protected double peso;
 
-	    private final colores COLOR = colores.blanco;
-	    private final consumoEnergetico CONSUMO = consumoEnergetico.F;
+	    private final String COLOR = colores[0];
+	    private final char CONSUMO = consumos[1];
 	    private final double PRECIO_BASE = 100;
 	    private final double PESO = 5;
 
@@ -25,7 +28,7 @@ public class Electrodomestico {
 	        this.consumoEnerg = CONSUMO;
 	    }
 
-	    public Electrodomestico(double precioBase, colores color, consumoEnergetico consumoEnerg, double peso) {
+	    public Electrodomestico(double precioBase, String color, char consumoEnerg, double peso) {
 	        this.precioBase = precioBase;
 	        this.color = color;
 	        this.consumoEnerg = consumoEnerg;
@@ -40,19 +43,19 @@ public class Electrodomestico {
 	        this.precioBase = precioBase;
 	    }
 
-	    public colores getColor() {
+	    public String getColor() {
 	        return color;
 	    }
 
-	    public void setColor(colores color) {
+	    public void setColor(String color) {
 	        this.color = color;
 	    }
 
-	    public consumoEnergetico getConsumoEnerg() {
+	    public char getConsumoEnerg() {
 	        return consumoEnerg;
 	    }
 
-	    public void setConsumoEnerg(consumoEnergetico consumoEnerg) {
+	    public void setConsumoEnerg(char consumoEnerg) {
 	        this.consumoEnerg = consumoEnerg;
 	    }
 
