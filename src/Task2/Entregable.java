@@ -1,8 +1,8 @@
 package Task2;
 
 public interface Entregable {
-	public boolean entregar( boolean atrb);
-	public boolean devolver(boolean atrb);
-	public boolean isEntregado(boolean atrb);
+	public boolean entregar();
+	public boolean devolver();
+	public boolean isEntregado();
 	public void compareTo(Object a);
 }

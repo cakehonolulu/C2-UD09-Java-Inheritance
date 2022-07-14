@@ -93,27 +93,6 @@ public class Videojuego  implements Entregable{
 
 
 
-	@Override
-	public boolean entregar(boolean atrb) {
-		// TODO Auto-generated method stub
-		return true;
-	}
-
-
-
-	@Override
-	public boolean devolver(boolean atrb) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-
-
-	@Override
-	public boolean isEntregado(boolean atrb) {
-		// TODO Auto-generated method stub
-		return atrb;
-	}
 
 
 
@@ -127,6 +106,30 @@ public class Videojuego  implements Entregable{
 			}else {
 				System.out.println("Los videojuegos " + titulo + " y " +  ((Videojuego) a).getTitulo() + " duran la misma cantidad de horas");
 			}
+	}
+
+
+
+	@Override
+	public boolean entregar() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+
+
+	@Override
+	public boolean devolver() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+	@Override
+	public boolean isEntregado() {
+		// TODO Auto-generated method stub
+		return this.entregado;
 	}
 	
 	
