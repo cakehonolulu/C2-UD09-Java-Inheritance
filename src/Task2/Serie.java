@@ -1,6 +1,6 @@
 package Task2;
 
-public class Serie {
+public class Serie implements Entregable {
 	protected String titulo;
 	protected int numTemporadas;
 	protected boolean entregado;
@@ -69,6 +69,36 @@ public class Serie {
 	public String toString() {
 		return "Serie [titulo=" + titulo + ", numTemporadas=" + numTemporadas + ", entregado=" + entregado + ", genero="
 				+ genero + ", creador=" + creador + "]";
+	}
+
+	@Override
+	public boolean entregar(boolean atrb) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean devolver(boolean atrb) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean isEntregado(boolean atrb) {
+		// TODO Auto-generated method stub
+		return atrb;
+	}
+
+	@Override
+	public void compareTo(Object a) {
+		// TODO Auto-generated method stub
+			if (this.numTemporadas < ((Serie) a).getNumTemporadas()) {
+				System.out.println("La serie "+ ((Serie) a).getTitulo() + "tiene mas temporadas que " + titulo);
+			} else if (this.numTemporadas > ((Serie) a).getNumTemporadas()) {
+				System.out.println("La serie "+ titulo + "tiene mas temporadas que " + ((Serie) a).getTitulo());
+			}else {
+				System.out.println("Las series " + titulo + " y " +  ((Serie) a).getTitulo() + "tienen el mismo numero de temporadas");
+			}
 	}
 
 }
