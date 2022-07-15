@@ -78,11 +78,14 @@ public class Aula {
 			System.out.println("la clase no se puede dar, ya que el numero de alumnos en inferior al 50% del aula");
 
 		} else {
+			System.out.println("ALUMNOS APROBADOS: ");
 			for (int i = 0; i < alumnos.length; i++) {
 				if (alumnos[i].getCalificación() >= 5) {
 					System.out.println(alumnos[i].toString());
 				}
 			}
+
+			System.out.println("ALUMNOS PRESENTES EN LA CLASE: ");
 		}
 
 	}
