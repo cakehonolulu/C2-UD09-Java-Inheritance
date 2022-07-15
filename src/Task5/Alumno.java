@@ -1,5 +1,7 @@
 package Task5;
 
+import java.util.Random;
+
 public class Alumno extends Persona {
 	private double calificación;
 
@@ -22,6 +24,17 @@ public class Alumno extends Persona {
 		this.calificación = calificación;
 	}
 
+	@Override
+	public void setAsistencia() {
+		Random rng = new Random();
+		int porcentaje = rng.nextInt(100);
+		
+		if (porcentaje > 50)
+		{
+			this.asistencia = true;
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return super.toString() + "Alumno [calificación=" + calificación + "]";
