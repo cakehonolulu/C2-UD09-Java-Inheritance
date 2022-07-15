@@ -68,20 +68,19 @@ public class Aula {
 
 	public void sePuedeDarClase() {
 
-		if (this.getProfesor().getAsistencia() == true) {
-			if ((this.getMateria().equals(this.getProfesor().getMateria()))) {
-				if (this.getAlumnos().length >= (this.getMaxEst() / 2)) {
-					for (int i = 0; i < alumnos.length; i++) {
-						System.out.println(alumnos[i].toString());
-					}
-				} else {
+		if (this.getProfesor().getAsistencia() == false) {
+			System.out.println("la clase no se puede dar, ya que el profesor no puede asistir");
 
-				}
-			} else {
+		} else if (!(this.getMateria().equals(this.getProfesor().getMateria()))) {
+			System.out.println("la clase no se puede dar, ya que el profesor no da la materia del aula");
 
-			}
+		} else if (this.getAlumnos().length < (this.getMaxEst() / 2)) {
+			System.out.println("la clase no se puede dar, ya que el numero de alumnos en inferior al 50% del aula");
+
 		} else {
-			System.out.println("");
+			for (int i = 0; i < alumnos.length; i++) {
+				System.out.println(alumnos[i].toString());
+			}
 		}
 
 	}
