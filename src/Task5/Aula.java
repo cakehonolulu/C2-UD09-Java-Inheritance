@@ -70,8 +70,9 @@ public class Aula {
 
 		if ((aula.getProfesor()).getAsistencia() == true && aula.getMateria().equals(aula.getProfesor().getMateria())
 				&& aula.getAlumnos().length >= (aula.getMaxEst() / 2)) {
-			aula.alumnos.toString();
-
+			for (int i = 0; i < aula.alumnos.length; i++) {
+				aula.alumnos[i].toString();
+			}
 		} else {
 			System.out.println("la clase no se puede dar");
 		}
