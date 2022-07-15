@@ -1,6 +1,5 @@
 package Task4;
 
-import java.util.ArrayList;
 
 public class Raices {
 	private double a;
