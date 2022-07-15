@@ -1,69 +1,88 @@
 package Task5;
 
-public class Persona {
+abstract class Persona {
+	/***
+	 * declaración de atributos
+	 */
+	String nombre;
+	int edad;
+	String sexo;
+	boolean asistencia;
 
-		String nombre;
-		int edad;
-		String sexo;
-		boolean asistencia;
-		
-		public Persona() {
-			this.nombre = "";
-			this.edad = 0;
-			this.sexo = "";
-			this.asistencia = false;
-		}
-		
-		public Persona(String nombre, int edad, String sexo) {
-			this.nombre = nombre;
-			this.edad = edad;
-			this.sexo = sexo;
-		}
+	/***
+	 * constructor por defecto
+	 */
+	public Persona() {
+		this.nombre = "";
+		this.edad = 0;
+		this.sexo = "";
+		this.asistencia = false;
+	}
 
-		public String getNombre() {
-			return nombre;
-		}
+	/***
+	 * constructor con todos los atributos
+	 * 
+	 * @param nombre
+	 * @param edad
+	 * @param sexo
+	 */
+	public Persona(String nombre, int edad, String sexo) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.sexo = sexo;
+	}
 
-		public int getEdad() {
-			return edad;
-		}
+	/***
+	 * 
+	 * getters y setters de todos los atributos
+	 */
+	public String getNombre() {
+		return nombre;
+	}
 
-		public String getSexo() {
-			return sexo;
-		}
+	public int getEdad() {
+		return edad;
+	}
 
-		public boolean getAsistencia() {
-			return asistencia;
-		}
-		
-		public void setNombre(String nombre) {
-			this.nombre = nombre;
-		}
+	public String getSexo() {
+		return sexo;
+	}
 
-		public void setEdad(int edad) {
-			this.edad = edad;
-		}
+	public boolean getAsistencia() {
+		return asistencia;
+	}
 
-		public void setSexo(String sexo) {
-			this.sexo = sexo;
-		}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
 
-		public void setAsistencia() {
-			/*
-			 * Dummy function
-			 * 
-			 * Each inherited class will treat the attendance
-			 * differently.
-			 * 
-			 * Leave it as it.
-			 */
-		}
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
 
-		@Override
-		public String toString() {
-			return "Persona [nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", asistencia=" + asistencia
-					+ "]";
-		}
-		
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	/***
+	 * def metodo
+	 */
+	public void setAsistencia() {
+		/*
+		 * Dummy function
+		 * 
+		 * Each inherited class will treat the attendance differently.
+		 * 
+		 * Leave it as it.
+		 */
+	}
+
+	/***
+	 * imprime el objeto Persona con los valores de todos sus atributos
+	 */
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", asistencia=" + asistencia + "]";
+	}
 
 }
