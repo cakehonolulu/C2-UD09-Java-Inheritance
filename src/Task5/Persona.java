@@ -14,11 +14,10 @@ public class Persona {
 			this.asistencia = false;
 		}
 		
-		public Persona(String nombre, int edad, String sexo, boolean asistencia) {
+		public Persona(String nombre, int edad, String sexo) {
 			this.nombre = nombre;
 			this.edad = edad;
 			this.sexo = sexo;
-			this.asistencia = asistencia;
 		}
 
 		public String getNombre() {
