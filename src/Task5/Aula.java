@@ -21,12 +21,10 @@ public class Aula {
 		this.id = 0;
 		this.maxEst = 0;
 		this.materia = Materia.sin_materia;
-		this.profesor=null;
-		this.alumnos=null;
+		this.profesor = null;
+		this.alumnos = null;
 
 	}
-	
-	
 
 	public Alumno[] getAlumnos() {
 		return alumnos;
@@ -68,12 +66,15 @@ public class Aula {
 		this.materia = materia;
 	}
 
+	public boolean sePuedeDarClase(Aula aula) {
+
+		return true;
+	}
+
 	@Override
 	public String toString() {
 		return "Aula [id=" + id + ", maxEst=" + maxEst + ", materia=" + materia + ", alumnos="
 				+ Arrays.toString(alumnos) + ", profesor=" + profesor + "]";
 	}
-
-	
 
 }
