@@ -23,7 +23,10 @@ public class Task5App {
 				new Alumno("Pepita2", 15, "mujer", 6),
 				new Alumno("Jose2", 16, "hombre", 5),
 				new Alumno("Josepa2", 15, "mujer", 2) };
+		
+		Aula aula = new Aula(1, 5, Materia.filosofia, profesores[2] , alumnos);
+		
+		aula.sePuedeDarClase();
 	}
 
-	
 }

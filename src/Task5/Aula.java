@@ -74,7 +74,7 @@ public class Aula {
 		} else if (!(this.getMateria().equals(this.getProfesor().getMateria()))) {
 			System.out.println("la clase no se puede dar, ya que el profesor no da la materia del aula");
 
-		} else if (this.getAlumnos().length < (this.getMaxEst() / 2)) {
+		} else if (alumnosPresentes() < (this.getMaxEst() / 2)) {
 			System.out.println("la clase no se puede dar, ya que el numero de alumnos en inferior al 50% del aula");
 
 		} else {
@@ -87,12 +87,24 @@ public class Aula {
 
 			System.out.println("ALUMNOS PRESENTES EN LA CLASE: ");
 			for (int i = 0; i < alumnos.length; i++) {
-				if (alumnos[i].getAsistencia()==true) {
+				if (alumnos[i].getAsistencia() == true) {
 					System.out.println(alumnos[i].toString());
 				}
 			}
 		}
 
+	}
+
+	public int alumnosPresentes() {
+		int presentes = 0;
+
+		for (int i = 0; i < this.alumnos.length; i++) {
+			if (alumnos[i].getAsistencia() == true) {
+				presentes++;
+
+			}
+		}
+		return presentes;
 	}
 
 	@Override
