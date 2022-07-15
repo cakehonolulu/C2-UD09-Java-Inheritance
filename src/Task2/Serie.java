@@ -47,8 +47,6 @@ public class Serie implements Entregable {
 		this.numTemporadas = numTemporadas;
 	}
 
-
-
 	public String getGenero() {
 		return genero;
 	}
@@ -71,36 +69,33 @@ public class Serie implements Entregable {
 				+ genero + ", creador=" + creador + "]";
 	}
 
-	
-	//Si el objeto que le pasamos por parametros tiene mas temporadas que el de la clase, devolvemos true
+	// Si el objeto que le pasamos por parametros tiene mas temporadas que el de la
+	// clase, devolvemos true
 	@Override
 	public boolean compareTo(Object a) {
 		// TODO Auto-generated method stub
 
-		boolean esMasLargo=false;
+		boolean esMasLargo = false;
 		if (this.numTemporadas < ((Serie) a).getNumTemporadas()) {
-			esMasLargo=true;
-	} 
-		
+			esMasLargo = true;
+		}
+
 		return esMasLargo;
 	}
 
-	@Override
 	public boolean entregar() {
 		// TODO Auto-generated method stub
 		return true;
 	}
 
-	@Override
 	public boolean devolver() {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
-	@Override
 	public boolean isEntregado() {
 		// TODO Auto-generated method stub
-		
+
 		return this.entregado;
 	}
 
