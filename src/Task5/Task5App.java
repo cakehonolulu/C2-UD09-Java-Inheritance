@@ -3,6 +3,7 @@ package Task5;
 public class Task5App {
 
 	public static void main(String[] args) {
+		//Arrays de profesores y alumnos
 		Profesor profesores[] = { new Profesor("Pepito", 40, "hombre", Materia.matematicas),
 				new Profesor("Ana", 35, "mujer", Materia.fisica),
 				new Profesor("Nate", 28, "n/b", Materia.filosofia),
@@ -24,8 +25,10 @@ public class Task5App {
 				new Alumno("Jose2", 16, "hombre", 5),
 				new Alumno("Josepa2", 15, "mujer", 2) };
 		
+		//Creacion del aula
 		Aula aula = new Aula(1, 5, Materia.filosofia, profesores[2] , alumnos);
 		
+		//Comprobación si se puede dar la clase
 		aula.sePuedeDarClase();
 	}
 
