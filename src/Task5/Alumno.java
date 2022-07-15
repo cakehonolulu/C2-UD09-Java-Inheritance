@@ -8,6 +8,11 @@ public class Alumno extends Persona {
 		this.calificación = calificación;
 	}
 
+	public Alumno(String nombre, int edad, String sexo, double calificación) {
+		super(nombre, edad, sexo);
+		this.calificación = calificación;
+	}
+
 	public Alumno() {
 		super();
 		this.calificación = 0;

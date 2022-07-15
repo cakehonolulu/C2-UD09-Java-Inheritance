@@ -9,9 +9,10 @@ public class Profesor extends Persona {
 		this.materia = Materia.sin_materia;
 	}
 
-	public Profesor(Materia materia) {
-		super();
+	public Profesor(String nombre, int edad, String sexo, Materia materia) {
+		super(nombre, edad, sexo);
 		this.materia = materia;
+
 	}
 
 	public Materia getMateria() {
