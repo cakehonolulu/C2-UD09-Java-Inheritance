@@ -23,6 +23,52 @@ public class Task2App {
 		videojuegos[1].entregar();
 		videojuegos[4].entregar();
 		
+		int contVid=0;
+		int contSer=0;
+		
+		
+		Videojuego masLargo = null;
+		
+		for (int i = 0; i < videojuegos.length; i++) {
+			if (videojuegos[i].isEntregado()) {
+				//System.out.println(videojuegos[i].toString());
+				contVid++;
+			}
+			
+			if (masLargo == null) {
+				masLargo=videojuegos[i];
+			} else {
+				if (!videojuegos[i].compareTo(masLargo)) {
+					masLargo=videojuegos[i];
+				}
+				
+			}	
+		}
+		
+		System.out.println(masLargo.toString());
+		
+		Serie MasTemp=null;
+		for (int i = 0; i < series.length; i++) {
+			if (series[i].isEntregado()) {
+				//System.out.println(series[i].toString());
+				contSer++;
+			}
+			
+			if (MasTemp == null) {
+				MasTemp=series[i];
+			} else {
+				if (!series[i].compareTo(MasTemp)) {
+					MasTemp=series[i];
+				}
+				
+			}	
+			
+		}
+		System.out.println(MasTemp.toString());
+		int contTot=contVid+contSer;
+		
+		
+		
 	}
 
 }

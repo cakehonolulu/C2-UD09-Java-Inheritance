@@ -71,16 +71,18 @@ public class Serie implements Entregable {
 				+ genero + ", creador=" + creador + "]";
 	}
 
+	
+	//Si el objeto que le pasamos por parametros tiene mas temporadas que el de la clase, devolvemos true
 	@Override
-	public void compareTo(Object a) {
+	public boolean compareTo(Object a) {
 		// TODO Auto-generated method stub
-			if (this.numTemporadas < ((Serie) a).getNumTemporadas()) {
-				System.out.println("La serie "+ ((Serie) a).getTitulo() + "tiene mas temporadas que " + titulo);
-			} else if (this.numTemporadas > ((Serie) a).getNumTemporadas()) {
-				System.out.println("La serie "+ titulo + "tiene mas temporadas que " + ((Serie) a).getTitulo());
-			}else {
-				System.out.println("Las series " + titulo + " y " +  ((Serie) a).getTitulo() + "tienen el mismo numero de temporadas");
-			}
+
+		boolean esMasLargo=false;
+		if (this.numTemporadas < ((Serie) a).getNumTemporadas()) {
+			esMasLargo=true;
+	} 
+		
+		return esMasLargo;
 	}
 
 	@Override

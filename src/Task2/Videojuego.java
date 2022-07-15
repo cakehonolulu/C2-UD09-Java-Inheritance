@@ -95,17 +95,18 @@ public class Videojuego  implements Entregable{
 
 
 
+	//Si el objeto que le pasamos por parametros dura más que el de la clase, devolvemos true
 
 	@Override
-	public void compareTo(Object a) {
+	public boolean compareTo(Object a) {
 		// TODO Auto-generated method stub
-			if (this.horasEstimadas < ((Videojuego) a).getHorasEstimadas()) {
-				System.out.println("El videjuego "+ ((Videojuego) a).getTitulo() + " dura mas horas que " + titulo);
-			} else if (this.horasEstimadas > ((Videojuego) a).getHorasEstimadas()) {
-				System.out.println("El videjuego "+ titulo + " dura mas horas que " + ((Videojuego) a).getTitulo());
-			}else {
-				System.out.println("Los videojuegos " + titulo + " y " +  ((Videojuego) a).getTitulo() + " duran la misma cantidad de horas");
-			}
+
+		boolean esMasLargo=false;
+		if (this.horasEstimadas < ((Videojuego) a).getHorasEstimadas()) {
+			esMasLargo=true;
+	} 
+
+		return esMasLargo;
 	}
 
 
