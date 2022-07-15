@@ -8,17 +8,19 @@ public class Alumno extends Persona {
 	public Alumno(double calificación) {
 		super();
 		this.calificación = calificación;
+		setAsistencia();
 	}
 
 	public Alumno(String nombre, int edad, String sexo, double calificación) {
 		super(nombre, edad, sexo);
 		this.calificación = calificación;
+		setAsistencia();
 	}
 
 	public Alumno() {
 		super();
 		this.calificación = 0;
-
+		setAsistencia();
 	}
 
 	public double getCalificación() {
