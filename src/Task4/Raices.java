@@ -13,13 +13,13 @@ public class Raices {
 		this.c = c;
 	}
 
-	public double getDscriminante() {
+	public double getDiscriminante() {
 		double discriminante = Math.pow(this.b, 2) - 4 * this.a * this.c;
 		return discriminante;
 	}
 
 	public boolean tieneRaices() {
-		if (this.getDscriminante() >= 0) {
+		if (this.getDiscriminante() >= 0) {
 			return true;
 		} else {
 			return false;
@@ -27,7 +27,7 @@ public class Raices {
 	}
 	
 	public boolean tieneRaiz() {
-		if (this.getDscriminante() == 0) {
+		if (this.getDiscriminante() == 0) {
 			return true;
 		} else {
 			return false;
@@ -35,22 +35,28 @@ public class Raices {
 	}
 	
 	public void calcular() {
-		double suma=(-b + Math.sqrt((Math.pow(b, 2) - (4 * this.a * this.c)))/ (2/this.a));
-		double resta=(-b - Math.sqrt((Math.pow(b, 2) - (4 * this.a * this.c)))/ (2/this.a));		
+		double suma = (-b + (Math.sqrt(Math.pow(b, 2) - (4 * this.a * this.c)))) / (2 * this.a);
+		double resta = (-b - (Math.sqrt(Math.pow(b, 2) - (4 * this.a * this.c)))) / (2 * this.a);
 		
-			if (this.getDscriminante()<0) {//uno tiene solucion
+			if (this.getDiscriminante()<0) {//uno tiene solucion
 				System.out.println("No tiene solucion");
-			} else if(this.getDscriminante()==0 ){//una soluciones
-				System.out.println("Resultado es " + suma);
+			} else if(this.getDiscriminante()==0 ){//una soluciones
+				System.out.println("La solución es " + suma);
 			}else {
-				System.out.println("Resultado suma: "+ suma + "\nResultado resta: " + resta);
+				System.out.println("Las soluciones son : "+ suma + " y: " + resta);
 			}	
 		
 	}
 	
+	public void obtenerRaices() {
+		double primeraSolucion = (-b + (Math.sqrt(Math.pow(b, 2) - (4 * this.a * this.c)))) / (2 * this.a);
+		double segundaSolucion = (-b - (Math.sqrt(Math.pow(b, 2) - (4 * this.a * this.c)))) / (2 * this.a);
+		System.out.println("x1: " + primeraSolucion + " x2: " + segundaSolucion);
+	}
 	
-	
-	
-	
+	public void obtenerRaiz() {
+		double solucionUnica = (-b + (Math.sqrt(Math.pow(b, 2) - (4 * this.a * this.c)))) / (2 * this.a);
+		System.out.println("x: " + solucionUnica);
+	}
 
 }
