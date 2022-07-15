@@ -86,6 +86,11 @@ public class Aula {
 			}
 
 			System.out.println("ALUMNOS PRESENTES EN LA CLASE: ");
+			for (int i = 0; i < alumnos.length; i++) {
+				if (alumnos[i].getAsistencia()==true) {
+					System.out.println(alumnos[i].toString());
+				}
+			}
 		}
 
 	}
