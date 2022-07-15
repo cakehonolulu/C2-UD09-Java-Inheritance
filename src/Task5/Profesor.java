@@ -9,12 +9,13 @@ public class Profesor extends Persona {
 	public Profesor() {
 		super();
 		this.materia = Materia.sin_materia;
+		setAsistencia();
 	}
 
 	public Profesor(String nombre, int edad, String sexo, Materia materia) {
 		super(nombre, edad, sexo);
 		this.materia = materia;
-
+		setAsistencia();
 	}
 
 	public Materia getMateria() {
