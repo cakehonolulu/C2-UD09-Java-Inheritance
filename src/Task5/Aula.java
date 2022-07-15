@@ -87,7 +87,7 @@ public class Aula {
 	/*
 	 *  'Setter' que nos permite asignar alumnos al aula.
 	 *  
-	 *  @param	: Los alumnos del aula
+	 *  @param alumnos	: Los alumnos del aula
 	 */
 	public void setAlumnos(Alumno[] alumnos) {
 		// Asigna los alumnos al aula
@@ -97,7 +97,7 @@ public class Aula {
 	/*
 	 *  'Setter' que nos permite asignar al profesor(a) en el aula.
 	 *  
-	 *   @param	: El profesor del aula
+	 *   @param	profesor	: El profesor del aula
 	 */
 	public void setProfesor(Profesor profesor) {
 		// Asigna el profesor al aula
@@ -127,7 +127,7 @@ public class Aula {
 	/*
 	 *  'Setter' que nos permite asignar el ID del aula
 	 *  
-	 *  @param	: El ID del aula
+	 *  @param id	: El ID del aula
 	 */
 	public void setId(int id) {
 		// Asigna el ID al aula
@@ -137,7 +137,7 @@ public class Aula {
 	/*
 	 *  'Setter' que nos permite asignar los alumnos máximos asignados al aula
 	 *  
-	 *  @param	: Los alumnos máximos en el aula
+	 *  @param maxEst	: Los alumnos máximos en el aula
 	 */
 	public void setMaxEst(int maxEst) {
 		// Asignamos el valor
@@ -157,7 +157,7 @@ public class Aula {
 	/*
 	 *  'Setter' que le asigna al aula una materia
 	 *  
-	 *  @param	: La materia del aula
+	 *  @param materia	: La materia del aula
 	 */
 	public void setMateria(Materia materia) {
 		// Asigna una determinada materia a la materia de la aula
