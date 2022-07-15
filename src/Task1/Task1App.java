@@ -5,8 +5,6 @@ public class Task1App {
 	public static void main(String[] args) {
 		Electrodomestico[] electrodomesticos = new Electrodomestico[10];
 		
-		int precioTotal = 0, precioTv = 0, precioLavadoras = 0;
-		
 		electrodomesticos[0] = new Electrodomestico(120, "bLanco", 'Z', 80);
 		electrodomesticos[1] = new Electrodomestico(20, "Negro", 'A', 5);
 		electrodomesticos[2] = new Television(250, "amarillo", 'B', 50, 40, true);
@@ -18,28 +16,48 @@ public class Task1App {
 		electrodomesticos[8] = new Lavadora(400, 160);
 		electrodomesticos[9] = new Electrodomestico(100, "ROSA", 'Z', 200);
 		
-		for (int i = 0; i < electrodomesticos.length; i++) {
-			electrodomesticos[i].precioFinal();
-			precioTotal += electrodomesticos[i].precioBase;
-		}
+		int precioTotal=precioElectrodomesticos(electrodomesticos);
+		int precioTv=precioTelevisiones(electrodomesticos);
+		int precioLavadoras=precioLavadoras(electrodomesticos);
+
+		mostrarResult(precioTotal, precioTv, precioLavadoras);
 		
-		for (int i = 0; i < electrodomesticos.length; i++) {
-			if (electrodomesticos[i] instanceof Television)
+	}
+	
+	public static int precioElectrodomesticos( Electrodomestico[] elec) {
+		int precioTotal=0;
+		for (int i = 0; i < elec.length; i++) {
+			elec[i].precioFinal();
+			precioTotal += elec[i].precioBase;
+		}
+		return precioTotal;
+	}
+	
+	public static int precioTelevisiones( Electrodomestico[] elec) {
+		int precioTotal=0;
+		for (int i = 0; i < elec.length; i++) {
+			if (elec[i] instanceof Television)
 			{
-				precioTv += electrodomesticos[i].precioBase;
+				precioTotal += elec[i].precioBase;
 			}
 		}
-		
-		for (int i = 0; i < electrodomesticos.length; i++) {
-			if (electrodomesticos[i] instanceof Lavadora)
+		return precioTotal;
+	}
+
+	public static int precioLavadoras( Electrodomestico[] elec) {
+		int precioTotal=0;
+		for (int i = 0; i < elec.length; i++) {
+			if (elec[i] instanceof Lavadora)
 			{
-				precioLavadoras += electrodomesticos[i].precioBase;
+				precioTotal += elec[i].precioBase;
 			}
 		}
-		
+		return precioTotal;
+	}
+	
+	public static void mostrarResult(int precioTotal , int precioTv , int precioLavadoras) {
 		System.out.println("Precio TVs: " + precioTv + "\nPrecio Lavadoras: " + precioLavadoras
 				+ "\nPrecio Electrodomésticos: " + precioTotal);
-		
 	}
 
 }
