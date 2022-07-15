@@ -66,15 +66,22 @@ public class Aula {
 		this.materia = materia;
 	}
 
-	public void sePuedeDarClase(Aula aula) {
+	public void sePuedeDarClase() {
 
-		if ((aula.getProfesor()).getAsistencia() == true && aula.getMateria().equals(aula.getProfesor().getMateria())
-				&& aula.getAlumnos().length >= (aula.getMaxEst() / 2)) {
-			for (int i = 0; i < aula.alumnos.length; i++) {
-				aula.alumnos[i].toString();
+		if (this.getProfesor().getAsistencia() == true) {
+			if ((this.getMateria().equals(this.getProfesor().getMateria()))) {
+				if (this.getAlumnos().length >= (this.getMaxEst() / 2)) {
+					for (int i = 0; i < alumnos.length; i++) {
+						System.out.println(alumnos[i].toString());
+					}
+				} else {
+
+				}
+			} else {
+
 			}
 		} else {
-			System.out.println("la clase no se puede dar");
+			System.out.println("");
 		}
 
 	}
