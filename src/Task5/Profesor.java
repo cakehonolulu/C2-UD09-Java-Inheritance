@@ -1,5 +1,7 @@
 package Task5;
 
+import java.util.Random;
+
 public class Profesor extends Persona {
 
 	private Materia materia;
@@ -23,6 +25,17 @@ public class Profesor extends Persona {
 		this.materia = materia;
 	}
 
+	@Override
+	public void setAsistencia() {
+		Random rng = new Random();
+		int porcentaje = rng.nextInt(100);
+		
+		if (porcentaje > 20)
+		{
+			this.asistencia = true;
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return super.toString() + "Profesor [materia=" + materia + "]";
