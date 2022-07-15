@@ -79,7 +79,9 @@ public class Aula {
 
 		} else {
 			for (int i = 0; i < alumnos.length; i++) {
-				System.out.println(alumnos[i].toString());
+				if (alumnos[i].getCalificación() >= 5) {
+					System.out.println(alumnos[i].toString());
+				}
 			}
 		}
 
