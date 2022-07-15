@@ -66,9 +66,16 @@ public class Aula {
 		this.materia = materia;
 	}
 
-	public boolean sePuedeDarClase(Aula aula) {
+	public void sePuedeDarClase(Aula aula) {
 
-		return true;
+		if ((aula.getProfesor()).getAsistencia() == true && aula.getMateria().equals(aula.getProfesor().getMateria())
+				&& aula.getAlumnos().length >= (aula.getMaxEst() / 2)) {
+			aula.alumnos.toString();
+
+		} else {
+			System.out.println("la clase no se puede dar");
+		}
+
 	}
 
 	@Override
