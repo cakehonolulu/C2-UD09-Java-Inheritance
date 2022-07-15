@@ -27,7 +27,7 @@ public class Task1App {
 	public static int precioElectrodomesticos( Electrodomestico[] elec) {
 		int precioTotal=0;
 		for (int i = 0; i < elec.length; i++) {
-			elec[i].precioFinal();
+			elec[i].precioFinal(); 
 			precioTotal += elec[i].precioBase;
 		}
 		return precioTotal;
