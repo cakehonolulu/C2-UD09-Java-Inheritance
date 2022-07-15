@@ -56,6 +56,8 @@ public class Alumno extends Persona {
 
 	/*
 	 *  'Getter' que nos devuelve la calificación del alumno.
+	 *  
+	 *  @return: Calificación del alumno
 	 */
 	public double getCalificación() {
 		// Retornamos la calificación
@@ -94,6 +96,8 @@ public class Alumno extends Persona {
 	
 	/*
 	 *  Método .toString() modificado para mostrar la calificación del alumno
+	 *
+	 *  @return	: La frase final conteniendo la información de la clase
 	 */
 	@Override
 	public String toString() {
