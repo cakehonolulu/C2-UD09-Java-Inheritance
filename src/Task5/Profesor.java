@@ -2,24 +2,29 @@ package Task5;
 
 public class Profesor extends Persona {
 
-	String materia;
+	private Materia materia;
 
 	public Profesor() {
 		super();
-		this.materia = "";
+		this.materia = Materia.sin_materia;
 	}
-	
-	public Profesor(String materia) {
+
+	public Profesor(Materia materia) {
 		super();
 		this.materia = materia;
 	}
 
-	public String getMateria() {
+	public Materia getMateria() {
 		return materia;
 	}
 
-	public void setMateria(String materia) {
+	public void setMateria(Materia materia) {
 		this.materia = materia;
 	}
-	
+
+	@Override
+	public String toString() {
+		return super.toString() + "Profesor [materia=" + materia + "]";
+	}
+
 }
