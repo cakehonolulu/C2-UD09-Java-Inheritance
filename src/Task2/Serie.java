@@ -1,12 +1,15 @@
 package Task2;
 
+//implementa la interfaz ENtregable
 public class Serie implements Entregable {
+	// atributos
 	protected String titulo;
 	protected int numTemporadas;
 	protected boolean entregado;
 	protected String genero;
 	protected String creador;
 
+//constructor con todos los atributos, menos entregado pasados por parametro
 	public Serie(String titulo, int numTemporadas, String genero, String creador) {
 		this.titulo = titulo;
 		this.numTemporadas = numTemporadas;
@@ -15,6 +18,7 @@ public class Serie implements Entregable {
 		this.creador = creador;
 	}
 
+//constructor con dos atributos pasados por parametro, resto por defecto
 	public Serie(String titulo, String creador) {
 		this.titulo = titulo;
 		this.numTemporadas = 3;
@@ -23,6 +27,7 @@ public class Serie implements Entregable {
 		this.creador = creador;
 	}
 
+//constructor por defecto
 	public Serie() {
 		this.titulo = "";
 		this.numTemporadas = 3;
@@ -31,6 +36,7 @@ public class Serie implements Entregable {
 		this.creador = "";
 	}
 
+	// getters y setters
 	public String getTitulo() {
 		return titulo;
 	}
@@ -63,6 +69,9 @@ public class Serie implements Entregable {
 		this.creador = creador;
 	}
 
+	/***
+	 * sobreescritura del metodo toString()
+	 */
 	@Override
 	public String toString() {
 		return "Serie [titulo=" + titulo + ", numTemporadas=" + numTemporadas + ", entregado=" + entregado + ", genero="
@@ -83,18 +92,18 @@ public class Serie implements Entregable {
 		return esMasLargo;
 	}
 
+	// cambia el estado de entregado a true
 	public boolean entregar() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
+//Cambia el destado de entregado a false
 	public boolean devolver() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
+//devuelve el estado de entregado
 	public boolean isEntregado() {
-		// TODO Auto-generated method stub
 
 		return this.entregado;
 	}

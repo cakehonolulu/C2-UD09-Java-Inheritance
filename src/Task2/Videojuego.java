@@ -1,12 +1,15 @@
 package Task2;
 
+//implementa la interfaz Entregable
 public class Videojuego implements Entregable {
+	// atributos
 	protected String titulo;
 	protected int horasEstimadas;
 	protected boolean entregado;
 	protected String genero;
 	protected String companyia;
 
+//constructor por defecto
 	public Videojuego() {
 		this.titulo = "";
 		this.horasEstimadas = 10;
@@ -15,6 +18,7 @@ public class Videojuego implements Entregable {
 		this.companyia = "";
 	}
 
+//constructor con 2 atributos por parametro, resto por defecto
 	public Videojuego(String titulo, int horasEstimadas) {
 		this.titulo = titulo;
 		this.horasEstimadas = horasEstimadas;
@@ -23,6 +27,7 @@ public class Videojuego implements Entregable {
 		this.companyia = "";
 	}
 
+//constructor con todos los atributos,menos entregado, por parametro
 	public Videojuego(String titulo, int horasEstimadas, String genero, String companyia) {
 		this.titulo = titulo;
 		this.horasEstimadas = horasEstimadas;
@@ -35,6 +40,7 @@ public class Videojuego implements Entregable {
 		return titulo;
 	}
 
+//getters y setters
 	public int getHorasEstimadas() {
 		return horasEstimadas;
 	}
@@ -63,6 +69,7 @@ public class Videojuego implements Entregable {
 		this.companyia = companyia;
 	}
 
+	// sobreescritura del metodo toStrign()
 	@Override
 	public String toString() {
 		return "Videojuego [titulo=" + titulo + ", horasEstimadas=" + horasEstimadas + ", entregado=" + entregado
@@ -84,18 +91,18 @@ public class Videojuego implements Entregable {
 		return esMasLargo;
 	}
 
+	// cambia el estado de entregado a true
 	public boolean entregar() {
-		// TODO Auto-generated method stub
 		return true;
 	}
 
+	// Cambia el destado de entregado a false
 	public boolean devolver() {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
+	// devuelve el estado de entregado
 	public boolean isEntregado() {
-		// TODO Auto-generated method stub
 		return this.entregado;
 	}
 
