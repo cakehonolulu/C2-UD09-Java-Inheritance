@@ -6,7 +6,7 @@ public class Task5App {
 		// Arrays de profesores y alumnos
 		Profesor profesores[] = llenarAarrayConProfesores();
 		Alumno alumnos[] = llenarArrayConAlumnos();
-		Alumno alumnos_2[] = llenarArrayConAlumnosDiferentes();// solo para hacer pruebas con diferenes posibilidades
+//		Alumno alumnos_2[] = llenarArrayConAlumnosDiferentes();// solo para hacer pruebas con diferenes posibilidades
 
 		// Creacion del aula
 		Aula aula = new Aula(1, 5, Materia.filosofia, profesores[2], alumnos);
