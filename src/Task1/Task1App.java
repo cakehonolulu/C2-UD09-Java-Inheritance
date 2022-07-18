@@ -3,13 +3,14 @@ package Task1;
 public class Task1App {
 
 	public static void main(String[] args) {
-
+//llenar array Electrodomestico con valores
 		Electrodomestico[] electrodomesticos = llenarArrayConElectrodomesticos();
-
+//calcular los precios totales de los objetos Lavadora, Television y el total de los electromesticos, 
+		// llamando a los metodos necesarios
 		int precioTotal = precioElectrodomesticos(electrodomesticos);
 		int precioTv = precioTelevisiones(electrodomesticos);
 		int precioLavadoras = precioLavadoras(electrodomesticos);
-
+//imprir los resultados obtenidos
 		mostrarResult(precioTotal, precioTv, precioLavadoras);
 
 	}
