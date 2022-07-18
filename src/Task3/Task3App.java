@@ -3,7 +3,7 @@ package Task3;
 public class Task3App {
 
 	public static void main(String[] args) {
-//se crean los objetos librro
+//se crean los objetos libro
 		Libro libro1 = new Libro("asd123-qwe432", "Cien años de soledad", "Gabriel Garcial Marquez", 606);
 		Libro libro2 = new Libro("zxc987-mnb123", "El principe pirata", "Gaelen Foley", 397);
 //se muestran por pantalla
